@@ -154,6 +154,8 @@ createQuasarApp(createApp, quasarUserOptions)
       
       import(/* webpackMode: "eager" */ 'boot/v-md-editor'),
       
+      import(/* webpackMode: "eager" */ 'boot/add'),
+      
       import(/* webpackMode: "eager" */ '@quasar/quasar-app-extension-qcalendar/src/boot/register.js'),
       
       import(/* webpackMode: "eager" */ 'quasar-app-extension-qhierarchy/src/boot/register.js')

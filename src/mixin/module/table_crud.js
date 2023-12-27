@@ -157,7 +157,7 @@ export default {
           descending: false,
           page: 1,
           rowsPerPage: 10,
-          rowsNumber: 0,
+          rowsNumber: 0
         };
       } else {
         //不显示翻页器功能区

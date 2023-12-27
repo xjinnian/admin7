@@ -102,6 +102,7 @@
         @emit-edit="handle_conform_edit"
       />
     </q-dialog>
+   
   </div>
 
 </template>
@@ -138,5 +139,9 @@ import EditComponent from "../admin/components/edit.vue";
       },
     };
   },
+  mounted(){
+    let res = this.$add(1,2)
+    console.log(res)
+  }
  }
 </script>
