@@ -123,6 +123,8 @@ export default {
     } else {
       this.editing_obj = this.$lodash.cloneDeep(this.temp_obj);
     }
+    console.log(this.editing_obj.id,this.editing_obj)
+
   },
   methods: {
 
@@ -168,19 +170,19 @@ export default {
     },
     check_name_password(name,password){
       return new Promise((resolve,reject)=>{
-        if(name.length < 6){
-          return reject(this.$q.notify({
-            type: "negative",
-            message: "名字长度6位以上",
-          }));
-        }
+        // if(name.length < 6){
+        //   return reject(this.$q.notify({
+        //     type: "negative",
+        //     message: "名字长度6位以上",
+        //   }));
+        // }
 
-        if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password)){
-          return reject(this.$q.notify({
-            type: "negative",
-            message: "密码包含大小写字母和数字,长度8位以上",
-          }));
-        }
+        // if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/.test(password)){
+        //   return reject(this.$q.notify({
+        //     type: "negative",
+        //     message: "密码包含大小写字母和数字,长度8位以上",
+        //   }));
+        // }
         resolve()
       })
     },

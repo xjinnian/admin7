@@ -18,10 +18,16 @@ const routes = [
         component: () => import("src/pages/admin/index.vue"),
       },
       {
+        path: "admin2",
+        name: "admin2",
+        component: () => import("src/pages/admin2/index.vue"),
+      },
+      {
         path: "role",
         name: "role",
         component: () => import("src/pages/role/index.vue"),
       },
+
       {
         path: "appAssets",
         name: "appAssets",

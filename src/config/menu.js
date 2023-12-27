@@ -15,6 +15,11 @@ const menus = [
     mark: "管理员",
   },
   {
+    label: "管理员2",
+    name: "admin2",
+    mark: "管理员2",
+  },
+  {
     label: "角色管理",
     name: "role",
     mark: "角色管理",
@@ -203,4 +208,6 @@ export const menus_obj = menus.reduce((pre, next) => {
   pre[next.name] = next
   return pre
 },{})
+
+
 

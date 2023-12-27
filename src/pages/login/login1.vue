@@ -67,48 +67,52 @@ export default defineComponent({
       isPwd: ref("true"),
     };
   },
+
   methods: {
     async login() {
       let params = {
         name: this.username,
         password: this.password,
-      };
+      };   
+      console.log(params)
+       debugger;
       let res = await api_admin.handle_login(params);
       let { code, data, msg, success } = res.data;
       if (success) {
         let {token,roleId,name,menus} = data
+    
         // menus是后端返回的权限列表 初始化先写死
         // 写死 后面走接口动态配置
-        let menus2 = [
-          "user",
-          "admin",
-          "role",
-          "appAssets",
-          "language",
-          "clientLanguage",
-          "questionTopic",
-          "docpool",
-          "menu",
-          "appSdkVersion",
-          "configVersion",
-          "layoutTemplate",
-          "themeTemplate",
-          "cssKey",
-          "jsKey",
-          "assetsKey",
-          "componentKey",
-          "i18nKey",
-          "keyGroup",
-          "keyChangeRecord",
-          "keyConfigRecord",
-          "packingConfig",
-          "packingRecord",
-          "packingProcess",
-          "competitionManage",
-          "mddocpool",
-          "adminRecord",
-          "tool"
-      ]
+      //  menus = [
+      //     "user",
+      //     "admin",
+      //     "role",
+      //     "appAssets",
+      //     "language",
+      //     "clientLanguage",
+      //     "questionTopic",
+      //     "docpool",
+      //     "menu",
+      //     "appSdkVersion",
+      //     "configVersion",
+      //     "layoutTemplate",
+      //     "themeTemplate",
+      //     "cssKey",
+      //     "jsKey",
+      //     "assetsKey",
+      //     "componentKey",
+      //     "i18nKey",
+      //     "keyGroup",
+      //     "keyChangeRecord",
+      //     "keyConfigRecord",
+      //     "packingConfig",
+      //     "packingRecord",
+      //     "packingProcess",
+      //     "competitionManage",
+      //     "mddocpool",
+      //     "adminRecord",
+      //     "tool"
+      // ]
         this.$q.sessionStorage.set("token", token);
         this.$q.sessionStorage.set("name", name);
         this.$q.sessionStorage.set("menus", menus);
